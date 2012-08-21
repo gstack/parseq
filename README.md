@@ -1,11 +1,11 @@
-mapper.js
+parseq.js
 =========
 
-a JS ORM for postgres, mongodb, redis and in memory db
+a JS flow control library
 
 License
 =======
-mapper.js is freely distributable under the terms of the MIT license.
+parseq.js is freely distributable under the terms of the MIT license.
 
 Copyright (c) 2012 Sutoiku, Inc.
 
