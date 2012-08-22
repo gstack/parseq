@@ -1,6 +1,6 @@
 require("./parseq")();
 
-Par(function() {
+par(function() {
   a = this();
   b = this();
   console.log("a");
@@ -25,7 +25,7 @@ function done(err, results) {
 }
 );
 
-Par(
+par(
   function condpar() {
     var done = this();
     for (var i = 0; i < 10; i++) {
@@ -40,7 +40,7 @@ Par(
   }
 );
 
-Seq(function() {
+seq(function() {
   console.log("step1");
   this(null, "from step 1");
 }, function(err, value) {
@@ -57,7 +57,7 @@ Seq(function() {
   }
 });
 
-Seq(function() {
+seq(function() {
   console.log("step1");
   this("error in 1", "from step 1");
 }, function(err, value) {
