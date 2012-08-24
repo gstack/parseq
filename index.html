@@ -10,7 +10,7 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <title>parseq by sutoiku</title>
+    <title>parseq.js by sutoiku</title>
   </head>
 
   <body>
@@ -18,8 +18,8 @@
       <div class="inner">
 
         <header>
-          <h1>parseq</h1>
-          <h2>Par-alel / Seq-uence flow control</h2>
+          <h1>parseq.js</h1>
+          <h2>a javascript simple flow control library, as simple as possible, but no simpler. </h2>
         </header>
 
         <section id="downloads" class="clearfix">
@@ -31,11 +31,7 @@
         <hr>
 
         <section id="main_content">
-          <h1>parseq.js</h1>
-
-<p>a javascript simple flow control library, as simple as possible, but no simpler.</p>
-
-<h1>INSTALL</h1>
+          <h1>INSTALL</h1>
 
 <p><em>not yet setup</em></p>
 
@@ -61,13 +57,14 @@
 use "this" to get the result of an asynchronous call</p>
 
 <div class="highlight"><pre><span class="nx">seq</span><span class="p">(</span>
-<span class="kd">function</span> <span class="nx">f1</span><span class="p">()</span> <span class="p">{</span>
-  <span class="nx">fs</span><span class="p">.</span><span class="nx">readfile</span><span class="p">(</span><span class="s2">"file1"</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>
-<span class="p">},</span> <span class="kd">function</span> <span class="nx">f2</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="s2">"from f2"</span><span class="p">;</span>
-<span class="p">},</span> <span class="kd">function</span> <span class="nx">done</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
-  <span class="p">...</span>
-<span class="p">});</span>
+  <span class="kd">function</span> <span class="nx">f1</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">fs</span><span class="p">.</span><span class="nx">readfile</span><span class="p">(</span><span class="s2">"file1"</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>
+  <span class="p">},</span> <span class="kd">function</span> <span class="nx">f2</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="s2">"from f2"</span><span class="p">;</span>
+  <span class="p">},</span> <span class="kd">function</span> <span class="nx">done</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+    <span class="p">...</span>
+  <span class="p">}</span>
+<span class="p">);</span>
 </pre></div>
 
 <p>f2 is called with its value parameter containing the content of file1 (or err contains the error returned by readfile)</p>
@@ -79,15 +76,15 @@ use "this" to get the result of an asynchronous call</p>
 <p>Runs the n-1 first functions given to par in parallel, and will call the last function when all others have completed.</p>
 
 <div class="highlight"><pre><span class="nx">par</span><span class="p">(</span>
-<span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-  <span class="nx">fs</span><span class="p">.</span><span class="nx">readFile</span><span class="p">(</span><span class="s2">"file1"</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>
-<span class="p">},</span>
-<span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-  <span class="nx">fs</span><span class="p">.</span><span class="nx">readFile</span><span class="p">(</span><span class="s2">"file2"</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>
-<span class="p">},</span>
-<span class="kd">function</span> <span class="nx">done</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">results</span><span class="p">)</span> <span class="p">{</span>
-  <span class="p">...</span>
-<span class="p">}</span>
+  <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">fs</span><span class="p">.</span><span class="nx">readFile</span><span class="p">(</span><span class="s2">"file1"</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>
+  <span class="p">},</span>
+  <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">fs</span><span class="p">.</span><span class="nx">readFile</span><span class="p">(</span><span class="s2">"file2"</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>
+  <span class="p">},</span>
+  <span class="kd">function</span> <span class="nx">done</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">results</span><span class="p">)</span> <span class="p">{</span>
+    <span class="p">...</span>
+  <span class="p">}</span>
 <span class="p">);</span>
 </pre></div>
 
@@ -100,14 +97,14 @@ use "this" to get the result of an asynchronous call</p>
 <p>Use "this()" as the callback instead of just "this".</p>
 
 <div class="highlight"><pre><span class="nx">par</span><span class="p">(</span>
-<span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-  <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">fs</span><span class="p">.</span><span class="nx">readFile</span><span class="p">(</span><span class="s2">"file"</span> <span class="o">+</span> <span class="nx">i</span><span class="p">,</span> <span class="k">this</span><span class="p">());</span>
+  <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">fs</span><span class="p">.</span><span class="nx">readFile</span><span class="p">(</span><span class="s2">"file"</span> <span class="o">+</span> <span class="nx">i</span><span class="p">,</span> <span class="k">this</span><span class="p">());</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="kd">function</span> <span class="nx">done</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">results</span><span class="p">)</span> <span class="p">{</span>
+    <span class="p">...</span>
   <span class="p">}</span>
-<span class="p">},</span>
-<span class="kd">function</span> <span class="nx">done</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">results</span><span class="p">)</span> <span class="p">{</span>
-  <span class="p">...</span>
-<span class="p">}</span>
 <span class="p">);</span>
 </pre></div>
 
@@ -143,7 +140,7 @@ OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
         </section>
 
         <footer>
-          parseq is maintained by <a href="https://github.com/sutoiku">sutoiku</a><br>
+          parseq.js is maintained by <a href="https://github.com/sutoiku">sutoiku</a><br>
           This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.
         </footer>
 
