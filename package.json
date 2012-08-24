@@ -1,7 +1,8 @@
 {
   "author": "psq <psq@sutoiku.com>",
   "name": "parseq",
-  "version": "0.0.1",
+  "description": "a javascript simple flow control library, as simple as possible, but no simpler.",
+  "version": "0.1",
   "main": "parseq.js",
   "dependencies": {
     "debug": "0.6.x"
@@ -12,6 +13,18 @@
   },
   "optionalDependencies": {},
   "engines": {
-    "node": "0.8.x"
+    "node": ">=0.6"
+  },
+  "bugs": "https://github.com/sutoiku/parseq/issues",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/sutoiku/parseq/raw/master/LICENSE"
+    }
+  ],
+  "homepage": "http://parseqjs.com",
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/sutoiku/parseq.git"
   }
 }
