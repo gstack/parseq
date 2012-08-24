@@ -1,33 +1,42 @@
-Jekyll bootstrap is a theme for jekyll which uses the [twitter bootstrap css             framework](https://github.com/twitter/bootstrap).
-The advantage of jekyll is that it is self hosted (or hosted on github) and that you can write in markdown on a text editor and just git push new posts to a server which         produces html files. The advantage of this theme is so that you can start blogging       almost right away without having to worry about making a theme.
+# Jekyll-Bootstrap
 
-###Setting up
-To start you own blog, simply `git clone` the [repository on github](https://github.com/ nhoss2/jekyll-bootstrap). You could also press the "fork" button on github.
+The quickest way to start and publish your Jekyll powered blog. 100% compatible with GitHub pages
 
-    git clone git://github.com/nhoss2/jekyll-bootstrap.git
+## Usage
 
-If you want to have your blog on github, make sure you change to the `gh-pages` branch.
+For all usage and documentation please see: <http://jekyllbootstrap.com>
 
-    git checkout gh-pages
+## Version
 
-Then you will need to edit the `_config.yml` file at the root of repository.
+0.2.13 - stable and versioned using [semantic versioning](http://semver.org/).
 
-To add your own posts, add a file to the `_posts` directory which has the name `year-month-day-title.md`. Note - the file does not have to be markdown.
+## Contributing 
 
-To publish the post, just `git push` it to your own github repo and your set!
+This repository tracks 2 projects:
 
-###Things to change on `_config.yml`
-There is a config file at the root called `_config.yml`. By Default it looks like:
+- **Jekyll-Bootstrap Framework.**  
+  The framework for which users should clone and build their blog on top of is available in the master branch.
+  
+  To contribute to the framework please make sure to checkout your branch based on `jb-development`!!
+  This is very important as it allows me to accept your pull request without having to publish a public version release.
+  
+  Small, atomic Features, bugs, etc.   
+  Use the `jb-development` branch but note it will likely change fast as pull requests are accepted.   
+  Please rebase as often as possible when working.   
+  Work on small, atomic features/bugs to avoid upstream commits affecting/breaking your development work.
+  
+  For Big Features or major API extensions/edits:   
+  This is the one case where I'll accept pull-requests based off the master branch.
+  This allows you to work in isolation but it means I'll have to manually merge your work into the next public release.
+  Translation : it might take a bit longer so please be patient! (but sincerely thank you).
+ 
+- **Jekyll-Bootstrap Documentation Website.**    
+  The documentation website at <http://jekyllbootstrap.com> is maintained in the gh-pages branch.
+  Please fork and contribute documentation additions to this branch only.
 
-    permalink: /:year/:title/
-    paginate: 10
-    exclude:
-    name: Jekyll Bootstrap
-    baseurl: /jekyll-bootstrap/
+The master and gh-pages branch do not share the same ancestry. Please treat them as completely separate git repositories!
 
-You will need to change the `name` and `baseurl` fields. The others are optional.
-The `baseurl` field is used for the css files and pagination, if you are hosting the     blog on github, you will need to change it to your repository name unless your           repository is the same name as your github user name, which means you will need to have  no value for `baseurl`.
 
-For more information on Jekyll, visit their [wiki on github](https://github.com/mojombo/ jekyll/wiki).
+## License
 
-For more information on github pages: [http://pages.github.com](http://pages.github.com).
+[Creative Commons](http://creativecommons.org/licenses/by-nc-sa/3.0/)

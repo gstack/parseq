@@ -1,0 +1,10 @@
+
+http://parseqjs.com/archive.html
+http://parseqjs.com/atom.xml
+http://parseqjs.com/categories.html
+http://parseqjs.com/index.html
+http://parseqjs.com/pages.html
+http://parseqjs.com/sitemap.txt
+http://parseqjs.com/tags.html
+
+http://parseqjs.com/lessons/2011/12/29/jekyll-introduction

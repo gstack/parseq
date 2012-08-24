@@ -1,4 +1,6 @@
-{% include header.html %}
-{% assign post = page %}
-{% include post.html %}
-{% include footer.html %}
+---
+theme :
+  name : twitter
+---
+{% include JB/setup %}
+{% include themes/twitter/default.html %}
