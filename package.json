@@ -1,7 +1,8 @@
 {
   "author": "psq <psq@sutoiku.com>",
-  "name": "parseqjs",
+  "name": "parseq",
   "version": "0.0.1",
+  "main": "parseq.js",
   "dependencies": {
     "debug": "0.6.x"
   },

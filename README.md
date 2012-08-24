@@ -11,12 +11,25 @@ $ npm install parseq
 
 # MANUAL
 
+## Require
+```javascript
+var par = require("parseq").par;
+var seq = require("parseq").seq;
+```
+
+or the shorthand (but it places "par" and "seq" in the global scope, and will make jshint unhappy).
+
+```javascript
+require("parseq")();
+```
+
 ## Sequencial flow
 Calls each function sequentially.  Either the return value is passed as the second parameter to the next function, or
 use "this" to get the result of an asynchronous call
 
 ```javascript
-seq(function f1() {
+seq(
+function f1() {
   fs.readfile("file1", this);
 }, function f2(err, value) {
   return "from f2";
@@ -34,7 +47,8 @@ done is called with value = "from f2"
 Runs the n-1 first functions given to par in parallel, and will call the last function when all others have completed.
 
 ```javascript
-par(function() {
+par(
+function() {
   fs.readFile("file1", this);
 },
 function() {
@@ -54,7 +68,8 @@ err contains the first encountered err if any
 Use "this()" as the callback instead of just "this".
 
 ```javascript
-par(function() {
+par(
+function() {
   for (var i = 0; i < 5; i++)
   fs.readFile("file" + i, this());
 },
