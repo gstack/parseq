@@ -1,0 +1,4 @@
+.npmignore
+.tm_properties
+.git
+.gitignore
