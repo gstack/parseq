@@ -3,6 +3,77 @@ parseq.js
 
 a JS flow control library
 
+# INSTALL
+*not yet setup*
+```bash
+$ npm install parseq
+```
+
+# MANUAL
+
+## Sequencial flow
+Calls each function sequentially.  Either the return value is passed as the second parameter to the next function, or
+use "this" to get the result of an asynchronous call
+
+```javascript
+seq(function f1() {
+  fs.readfile("file1", this);
+}, function f2(err, value) {
+  return "from f2";
+}, function done(err, value) {
+  ...
+});
+```
+
+f2 is called with its value parameter containing the content of file1 (or err contains the error returned by readfile)
+
+done is called with value = "from f2"
+
+## Parallel flow
+
+Runs the n-1 first functions given to par in parallel, and will call the last function when all others have completed.
+
+```javascript
+par(function() {
+  fs.readFile("file1", this);
+},
+function() {
+  fs.readFile("file2", this);
+},
+function done(err, results) {
+  ...
+}
+);
+```
+In done, results[0] contains the content of file1, results[1] contains the content of file1.
+
+err contains the first encountered err if any
+
+## Dynamic number of Parallel flow
+
+Use "this()" as the callback instead of just "this".
+
+```javascript
+par(function() {
+  for (var i = 0; i < 5; i++)
+  fs.readFile("file" + i, this());
+},
+function done(err, results) {
+  ...
+}
+);
+```
+results[0-4] contains the content of file[0-4]
+
+err contains the first encountered err if any
+
+
+# TESTING
+Really just a very verbose example, more tests coming up
+```bash
+node testparseq.js
+```
+
 License
 =======
 parseq.js is freely distributable under the terms of the MIT license.
