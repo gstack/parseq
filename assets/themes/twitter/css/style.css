@@ -69,7 +69,7 @@ html, body {
 	color:#FFF;
 }
 	
-  
+pre { background-color: #000000; }
 /*.highlight  { background-color: #000000; }*/
 .highlight .hll { background-color: #0000FF }
 .highlight .c { color: #008800; font-style: italic; background-color: #0f140f } /* Comment */
