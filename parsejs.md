@@ -5,29 +5,29 @@ tagline: Sa javascript simple flow control library, as simple as possible, but n
 ---
 # INSTALL
 *not yet setup*
-```bash
+{% highlight bash %}
 $ npm install parseq
-```
+{% endhighlight %}
 
 # USE
 
 ## Require
-```javascript
+{% highlight javascript %}
 var par = require("parseq").par;
 var seq = require("parseq").seq;
-```
+{% endhighlight %}
 
 or the shorthand (but it places "par" and "seq" in the global scope, and will make jshint unhappy).
 
-```javascript
+{% highlight javascript %}
 require("parseq")();
-```
+{% endhighlight %}
 
 ## Sequencial flow
 Calls each function sequentially.  Either the return value is passed as the second parameter to the next function, or
 use "this" to get the result of an asynchronous call
 
-```javascript
+{% highlight javascript %}
 seq(
   function f1() {
     fs.readfile("file1", this);
@@ -37,7 +37,7 @@ seq(
     ...
   }
 );
-```
+{% endhighlight %}
 
 f2 is called with its value parameter containing the content of file1 (or err contains the error returned by readfile)
 
@@ -69,7 +69,7 @@ err contains the first encountered err if any
 
 Use "this()" as the callback instead of just "this".
 
-```javascript
+{% highlight javascript %}
 par(
   function() {
     for (var i = 0; i < 5; i++) {
@@ -80,7 +80,7 @@ par(
     ...
   }
 );
-```
+{% endhighlight %}
 results\[0-4\] contains the content of file\[0-4\]
 
 err contains the first encountered err if any
@@ -88,9 +88,9 @@ err contains the first encountered err if any
 
 # TESTING
 Really just a very verbose example, more tests coming up
-```bash
+{% highlight bash %}
 $ node testparseq.js
-```
+{% endhighlight %}
 
 # LICENSE
 parseq.js is freely distributable under the terms of the MIT license.
