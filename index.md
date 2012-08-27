@@ -11,13 +11,13 @@ $ npm install parseq
 
 # USE
 
-## Require
+Conventional require statements.
 {% highlight javascript %}
 var par = require("parseq").par;
 var seq = require("parseq").seq;
 {% endhighlight %}
 
-or the shorthand (but it places "par" and "seq" in the global scope, and will make jshint unhappy).
+Or use the shorthand (but it places `par` and `seq` in the global scope, and will make jshint unhappy).
 
 {% highlight javascript %}
 require("parseq")();
@@ -25,7 +25,7 @@ require("parseq")();
 
 ## Sequencial flow
 Calls each function sequentially.  Either the return value is passed as the second parameter to the next function, or
-use "this" to get the result of an asynchronous call
+use `this` to get the result of an asynchronous call
 
 {% highlight javascript %}
 seq(
@@ -39,9 +39,9 @@ seq(
 );
 {% endhighlight %}
 
-f2 is called with its value parameter containing the content of file1 (or err contains the error returned by readfile)
+Function `f2` is called with its value parameter containing the content of file1 (or err contains the error returned by readfile)
 
-done is called with value = "from f2"
+Function done is called with value = "from f2"
 
 ## Parallel flow
 
@@ -61,13 +61,13 @@ par(
 );
 {% endhighlight %}
 
-In done, results\[0\] contains the content of file1, results\[1\] contains the content of file1.
+In done, `results\[0\]` contains the content of file1, `results\[1\]` contains the content of file1.
 
-err contains the first encountered err if any
+Parameter err contains the first encountered err if any
 
 ## Dynamic number of Parallel flow
 
-Use "this()" as the callback instead of just "this".
+Use `this()` as the callback instead of just `this`.
 
 {% highlight javascript %}
 par(
@@ -81,9 +81,9 @@ par(
   }
 );
 {% endhighlight %}
-results\[0-4\] contains the content of file\[0-4\]
+Paramter `results\[0-4\]` contains the content of file\[0-4\].  Values are guaranteed to be in the same order as the calls to `this()`.
 
-err contains the first encountered err if any
+Parameter err contains the first encountered err if any
 
 
 # TESTING
