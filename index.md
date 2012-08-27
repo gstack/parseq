@@ -61,9 +61,9 @@ par(
 );
 {% endhighlight %}
 
-In done, `results\[0\]` contains the content of file1, `results\[1\]` contains the content of file1.
+In `done`, `results[0]` contains the content of file1, `results[1]` contains the content of file1.
 
-Parameter err contains the first encountered err if any
+Parameter `err` contains the first encountered error if any
 
 ## Dynamic number of Parallel flow
 
@@ -81,7 +81,7 @@ par(
   }
 );
 {% endhighlight %}
-Paramter `results\[0-4\]` contains the content of file\[0-4\].  Values are guaranteed to be in the same order as the calls to `this()`.
+Paramter `results[0-4]` contains the content of file[0-4].  Values are guaranteed to be in the same order as the calls to `this()`.
 
 Parameter err contains the first encountered err if any
 
