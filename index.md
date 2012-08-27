@@ -61,7 +61,7 @@ par(
 );
 {% endhighlight %}
 
-In `done`, `results[0]` contains the content of file1, `results[1]` contains the content of file1.
+In `done`, `results[0]` contains the content of file1, `results[1]` contains the content of file2.
 
 Parameter `err` contains the first encountered error if any
 
