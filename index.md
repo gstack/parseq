@@ -41,7 +41,7 @@ seq(
 
 Function `f2` is called with its value parameter containing the content of file1 (or err contains the error returned by readfile)
 
-Function done is called with value = "from f2"
+Function done is called with `value` = "from f2"
 
 ## Parallel flow
 
