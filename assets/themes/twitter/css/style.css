@@ -101,6 +101,7 @@ pre { background-color: #222222; }
   .logo {
     font-family: 'Nova Round';
     cursive; font-size: 140%;
+    font-size: 24px;
   }
 
 }
@@ -117,7 +118,8 @@ pre { background-color: #222222; }
 
   .logo {
     font-family: 'Nova Round';
-    cursive; font-size: 100%;
+    cursive; font-size: 120%;
+    font-size: 18px;
   }
 }
 
