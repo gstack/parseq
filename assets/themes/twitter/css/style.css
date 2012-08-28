@@ -90,7 +90,7 @@ pre { background-color: #222222; }
 
 @media (min-width: 768px) and (max-width: 979px) {
   .subtitle h1 {
-    line-height: 12px;
+    line-height: 8px;
     font-size: 18px;
     font-weight: normal;
     color: #999;
