@@ -75,7 +75,9 @@ h1 {
 pre { background-color: #222222; }
 
 .subtitle h1 {
-  line-height: 18px;
+  line-height: 26px;
+  font-size: 24px;
+  color: #999;
 }
 
 /*font-family: 'Nova Round', cursive;
