@@ -106,6 +106,19 @@ pre { background-color: #222222; }
 }
 
 @media (max-width: 767px) {
+  .subtitle h1 {
+    line-height: 8px;
+    font-size: 18px;
+    font-weight: normal;
+    color: #999;
+    margin-bottom: 0px;
+    margin-left: 0px;
+  }
+
+  .logo {
+    font-family: 'Nova Round';
+    cursive; font-size: 100%;
+  }
 }
 
 
