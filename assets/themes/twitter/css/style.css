@@ -84,8 +84,8 @@ pre { background-color: #222222; }
 }
 
 .logo {
-  font-family: 'Nova Round';
-  cursive; font-size: 200%;
+  font-family: 'Nova Round',cursive;
+  font-size: 200%;
 }
 
 @media (min-width: 768px) and (max-width: 979px) {
@@ -99,9 +99,8 @@ pre { background-color: #222222; }
   }
 
   .logo {
-    font-family: 'Nova Round';
-    cursive; font-size: 200%;
-    font-size: 24px;
+    font-family: 'Nova Round', cursive;
+    font-size: 48px;
   }
 
 }
@@ -117,9 +116,8 @@ pre { background-color: #222222; }
   }
 
   .logo {
-    font-family: 'Nova Round';
-    cursive; font-size: 200%;
-    font-size: 18px;
+    font-family: 'Nova Round', cursive;
+    font-size: 64px;
   }
 }
 
