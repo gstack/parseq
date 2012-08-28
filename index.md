@@ -45,7 +45,7 @@ Function done is called with `value` = "from f2"
 
 ## Parallel flow
 
-Runs the n-1 first functions given to par in parallel, and will call the last function when all others have completed.
+Runs the n-1 first functions given to `par` in parallel, and will call the last function when all others have completed.
 
 {% highlight javascript %}
 par(
