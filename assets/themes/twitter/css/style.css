@@ -83,6 +83,23 @@ pre { background-color: #222222; }
   margin-left: 40px;
 }
 
+
+@media (min-width: 768px) and (max-width: 979px) {
+  .subtitle h1 {
+    line-height: 12px;
+    font-size: 18px;
+    font-weight: normal;
+    color: #999;
+    margin-bottom: 0px;
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 767px) {
+}
+
+
+
 /*font-family: 'Nova Round', cursive;
 font-family: 'Cabin Condensed', sans-serif;
 font-family: 'Revalia', cursive;
