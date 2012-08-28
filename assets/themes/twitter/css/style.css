@@ -83,6 +83,10 @@ pre { background-color: #222222; }
   margin-left: 40px;
 }
 
+.logo {
+  font-family: 'Nova Round';
+  cursive; font-size: 200%;
+}
 
 @media (min-width: 768px) and (max-width: 979px) {
   .subtitle h1 {
@@ -93,6 +97,12 @@ pre { background-color: #222222; }
     margin-bottom: 0px;
     margin-left: 0px;
   }
+
+  .logo {
+    font-family: 'Nova Round';
+    cursive; font-size: 100%;
+  }
+
 }
 
 @media (max-width: 767px) {
