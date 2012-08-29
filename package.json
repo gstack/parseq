@@ -1,8 +1,8 @@
 {
   "author": "psq <psq@sutoiku.com>",
   "name": "parseq",
-  "description": "a javascript simple flow control library, as simple as possible, but no simpler.",
-  "version": "0.1",
+  "description": "a simple javascript flow control library, as simple as possible, but no simpler.",
+  "version": "0.1.0",
   "main": "parseq.js",
   "dependencies": {
     "debug": "0.6.x"
