@@ -4,7 +4,6 @@ title: parseq.js
 tagline: a simple javascript flow control library, as simple as possible, but no simpler.
 ---
 # INSTALL
-*not yet setup*
 {% highlight bash %}
 $ npm install parseq
 {% endhighlight %}
@@ -91,6 +90,11 @@ Really just a very verbose example, more tests coming up
 {% highlight bash %}
 $ node testparseq.js
 {% endhighlight %}
+
+# RESOURCES
+* Githup [repo](https://github.com/sutoiku/parseq)
+* Issue [tracker](https://github.com/sutoiku/parseq/issues)
+* Contribute by creating [pull requests](https://github.com/sutoiku/parseq/pulls)!
 
 # LICENSE
 parseq.js is freely distributable under the terms of the MIT license.
