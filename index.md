@@ -66,7 +66,7 @@ In `done`, `results[0]` contains the content of file1, `results[1]` contains the
 
 Parameter `err` contains the first encountered error, if any.
 
-## Dynamic number of Parallel flow
+## Dynamic number of Parallel flows
 
 Use `this()` as the callback instead of just `this`.
 
