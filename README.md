@@ -18,7 +18,7 @@ $ node testparseq.js
 
 # RESOURCES
 * [parseq.js](http://parseqjs.com) Documentation 
-* Githup [repo](https://github.com/sutoiku/parseq)
+* Github [repo](https://github.com/sutoiku/parseq)
 * Issue [tracker](https://github.com/sutoiku/parseq/issues)
 * Contribute by creating [pull requests](https://github.com/sutoiku/parseq/pulls)!
 
