@@ -60,7 +60,7 @@ par(
 );
 {% endhighlight %}
 
-In `done`, `results[0]` contains the content of file1, `results[1]` contains the content of file2. `done` is always called no matter what as the last function.  If any function signals an error, only `done will be called`.
+In `done`, `results[0]` contains the content of file1, `results[1]` contains the content of file2. `done` is always called no matter what as the last function.  If any function signals an error, `done` will be called next and remaining functions will be skipped.
 
 Parameter `err` contains the first encountered error if any
 
