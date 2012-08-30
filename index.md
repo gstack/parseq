@@ -62,7 +62,7 @@ par(
 
 In `done`, `results[0]` contains the content of file1, `results[1]` contains the content of file2. `done` is always called no matter what as the last function.  If any function signals an error, `done` will be called next and remaining functions will be skipped.
 
-Parameter `err` contains the first encountered error if any
+Parameter `err` contains the first encountered error if any.
 
 ## Dynamic number of Parallel flow
 
@@ -82,7 +82,7 @@ par(
 {% endhighlight %}
 Paramter `results[0-4]` contains the content of file[0-4].  Values are guaranteed to be in the same order as the calls to `this()`.
 
-Parameter err contains the first encountered err if any
+Parameter err contains the first encountered err if any.
 
 
 # TESTING
