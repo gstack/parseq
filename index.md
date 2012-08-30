@@ -38,9 +38,11 @@ seq(
 );
 {% endhighlight %}
 
-Function `f2` is called with its value parameter containing the content of file1 (or err contains the error returned by readfile)
+Function `f2` is called with its value parameter containing the content of file1 (or err contains the error returned by readfile).  
 
-Function done is called with `value` = "from f2"
+Function done is called with `value` = "from f2".
+
+`done` is always called no matter what as the last function.  If any function signals an error, `done` will be called next and remaining functions will be skipped.
 
 ## Parallel flow
 
@@ -60,7 +62,7 @@ par(
 );
 {% endhighlight %}
 
-In `done`, `results[0]` contains the content of file1, `results[1]` contains the content of file2. `done` is always called no matter what as the last function.  If any function signals an error, `done` will be called next and remaining functions will be skipped.
+In `done`, `results[0]` contains the content of file1, `results[1]` contains the content of file2.
 
 Parameter `err` contains the first encountered error if any.
 
