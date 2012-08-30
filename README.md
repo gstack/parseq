@@ -7,89 +7,17 @@ a simple javascript flow control library, as simple as possible, but no simpler.
 $ npm install parseq
 ```
 
-# USE
-
-## Require
-```javascript
-var par = require("parseq").par;
-var seq = require("parseq").seq;
-```
-
-or the shorthand (but it places "par" and "seq" in the global scope, and will make jshint unhappy).
-
-```javascript
-require("parseq")();
-```
-
-## Sequencial flow
-Calls each function sequentially.  Either the return value is passed as the second parameter to the next function, or
-use "this" to get the result of an asynchronous call
-
-```javascript
-seq(
-  function f1() {
-    fs.readfile("file1", this);
-  }, function f2(err, value) {
-    return "from f2";
-  }, function done(err, value) {
-    ...
-  }
-);
-```
-
-f2 is called with its value parameter containing the content of file1 (or err contains the error returned by readfile)
-
-done is called with value = "from f2"
-
-## Parallel flow
-
-Runs the n-1 first functions given to par in parallel, and will call the last function when all others have completed.
-
-```javascript
-par(
-  function() {
-    fs.readFile("file1", this);
-  },
-  function() {
-    fs.readFile("file2", this);
-  },
-  function done(err, results) {
-    ...
-  }
-);
-```
-In done, results[0] contains the content of file1, results[1] contains the content of file1.
-
-err contains the first encountered err if any
-
-## Dynamic number of Parallel flow
-
-Use "this()" as the callback instead of just "this".
-
-```javascript
-par(
-  function() {
-    for (var i = 0; i < 5; i++) {
-      fs.readFile("file" + i, this());
-    }
-  },
-  function done(err, results) {
-    ...
-  }
-);
-```
-results[0-4] contains the content of file[0-4]
-
-err contains the first encountered err if any
-
+#DOCUMENTATION
+See [parseq.js](http://parseqjs.com) main site.
 
 # TESTING
-Really just a very verbose example, more tests coming up
+Really just a very verbose example, more tests coming soon.
 ```bash
 $ node testparseq.js
 ```
 
 # RESOURCES
+* [parseq.js](http://parseqjs.com) Documentation 
 * Githup [repo](https://github.com/sutoiku/parseq)
 * Issue [tracker](https://github.com/sutoiku/parseq/issues)
 * Contribute by creating [pull requests](https://github.com/sutoiku/parseq/pulls)!
