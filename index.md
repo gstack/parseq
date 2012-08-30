@@ -97,7 +97,7 @@ $ node testparseq.js
 # RESOURCES
 * Githup [repo](https://github.com/sutoiku/parseq)
 * Issue [tracker](https://github.com/sutoiku/parseq/issues)
-* Contribute by creating [pull requests](https://github.com/sutoiku/parseq/pulls)!
+* Don't be shy, contribute by creating [pull requests](https://github.com/sutoiku/parseq/pulls), but just keep it simple!
 
 # LICENSE
 parseq.js is freely distributable under the terms of the MIT license.
