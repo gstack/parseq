@@ -82,10 +82,11 @@ par(
   }
 );
 {% endhighlight %}
-Paramter `results[0-4]` contains the content of file[0-4].  Values are guaranteed to be in the same order as the calls to `this()`.
+Parameter `results[0-4]` contains the content of file[0-4].  Values are guaranteed to be in the same order as the calls to `this()`.
 
 Parameter err contains the first encountered err if any.
 
+It is possible to combine the 2 types of parallel flows for maximum effect.
 
 # TESTING
 Really just a very verbose example, more tests coming up
