@@ -3,7 +3,6 @@
 a simple javascript flow control library, as simple as possible, but no simpler.
 
 # INSTALL
-*not yet setup*
 ```bash
 $ npm install parseq
 ```
@@ -89,6 +88,11 @@ Really just a very verbose example, more tests coming up
 ```bash
 $ node testparseq.js
 ```
+
+# RESOURCES
+* Githup [repo](https://github.com/sutoiku/parseq)
+* Issue [tracker](https://github.com/sutoiku/parseq/issues)
+* Contribute by creating [pull requests](https://github.com/sutoiku/parseq/pulls)!
 
 # LICENSE
 parseq.js is freely distributable under the terms of the MIT license.
