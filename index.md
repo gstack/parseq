@@ -24,7 +24,7 @@ require("parseq")();
 
 ## Sequencial flow
 Calls each function sequentially.  Either the return value is passed as the second parameter to the next function, or
-use `this` to get the result of an asynchronous call
+use `this` to get the result of an asynchronous call.
 
 {% highlight javascript %}
 seq(
@@ -64,7 +64,7 @@ par(
 
 In `done`, `results[0]` contains the content of file1, `results[1]` contains the content of file2.
 
-Parameter `err` contains the first encountered error if any.
+Parameter `err` contains the first encountered error, if any.
 
 ## Dynamic number of Parallel flow
 
