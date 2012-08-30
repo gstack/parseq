@@ -89,7 +89,7 @@ Parameter err contains the first encountered err if any.
 It is possible to combine the 2 types of parallel flows for maximum effect.
 
 # TESTING
-Really just a very verbose example, more tests coming up
+Really just a very verbose example, more tests coming soon.
 {% highlight bash %}
 $ node testparseq.js
 {% endhighlight %}
