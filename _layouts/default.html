@@ -1,6 +1,36 @@
----
-theme :
-  name : twitter
----
-{% include JB/setup %}
-{% include themes/twitter/default.html %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+    <meta name="author" content="Sutoiku">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href='http://fonts.googleapis.com/css?family=Nova+Round|Cabin+Condensed|Revalia|Averia+Serif+Libre|Shanti|Stint+Ultra+Expanded|Comfortaa|Baumans|Maven+Pro|Audiowide' rel='stylesheet' type='text/css'>
+  </head>
+
+  <body>
+    <div class="container">
+
+      <div class="content" style="position:relative">
+        {{ content }}
+        <a href="https://github.com/sutoiku/parseq"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"></a>
+      </div>
+
+      <footer>
+        <p>&copy; <a href="http://sutoiku.com">Sutoiku</a> 2012 
+          with help from <a href="http://jekyllrb.com/" target="_blank" title="Jekyll">Jekyll</a>
+          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+        </p>
+      </footer>
+
+    </div>
+  </body>
+</html>

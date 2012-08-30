@@ -95,7 +95,7 @@ $ node testparseq.js
 {% endhighlight %}
 
 # RESOURCES
-* Githup [repo](https://github.com/sutoiku/parseq)
+* Github [repo](https://github.com/sutoiku/parseq)
 * Issue [tracker](https://github.com/sutoiku/parseq/issues)
 * Don't be shy, contribute by creating [pull requests](https://github.com/sutoiku/parseq/pulls), but remember to keep it simple!
 
