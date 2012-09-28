@@ -73,3 +73,17 @@ seq(function() {
     console.log("done:", value);
   }
 });
+
+each([1, 2, 3], function(value, cb) {
+  console.log("each", value);
+  cb(null, value*value);
+}, function(err, results) {
+  console.log("errror", err, "results", results);
+});
+
+each([1, 2, 3], function(value, cb) {
+  console.log("each", value);
+  cb(value === 2 ? -1 : null, value*value);
+}, function(err, results) {
+  console.log("errror", err, "results", results);
+});

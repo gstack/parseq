@@ -87,12 +87,35 @@ function seq() {
   }
 }
 
+function each(arr, cb, done) {
+  var max = arr.length;
+  var current = 0;
+  var results = [];
+  var error = null;
+  function next() {
+    if (current < max) {
+      cb(arr[current++], function(err, result) {
+        if (err && !error) {
+          error = err;
+        }
+        results.push(result);
+        next();
+      });
+    } else {
+      done(error, results);
+    }
+  }
+  next();
+}
+
 function ParSeq() {
   this.par = par;
   this.seq = seq;
+  this.each = each;
 }
 
 ParSeq.par = par;
 ParSeq.seq = seq;
+ParSeq.each = each;
 
 module.exports = ParSeq;
