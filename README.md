@@ -1,6 +1,6 @@
 # parseq.js
 
-a simple javascript flow control library, as simple as possible, but no simpler.
+a simple javascript control flow library, as simple as possible, but no simpler.
 
 # INSTALL
 ```bash
