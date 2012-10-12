@@ -1,7 +1,7 @@
 ---
 layout: page
 title: parseq.js
-tagline: a simple javascript flow control library, as simple as possible, but no simpler.
+tagline: a simple javascript control flow library, as simple as possible, but no simpler.
 ---
 # INSTALL
 {% highlight bash %}
