@@ -108,6 +108,33 @@ function each(arr, cb, done) {
   next();
 }
 
+function pareach(arr, cb, done) {
+  var max = arr.length;
+  var results = [];
+  var error = null;
+  var count = 0;
+  for (var i = 0; i < max; i++) {
+    (function(i) {
+      cb(arr[i], function(err, result) {
+        if (err) {
+          if (!error) {
+            error = err;
+          }
+        } else {
+          results[i] = result;
+        }
+        count++;
+        if (count >= max) {
+          done(error, results);
+        }
+      });
+    })(i);
+  }
+}
+
+seq.each = each;
+par.each = pareach;
+
 function ParSeq() {
   this.par = par;
   this.seq = seq;

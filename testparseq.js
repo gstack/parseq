@@ -85,5 +85,18 @@ each([1, 2, 3], function(value, cb) {
   console.log("each", value);
   cb(value === 2 ? -1 : null, value*value);
 }, function(err, results) {
-  console.log("errror", err, "results", results);
+  console.log("error", err, "results", results);
+});
+
+
+par.each([1, 2, 3], function(value, cb) {
+  cb(null, value*2);
+}, function(err, results) {
+  console.log("error", err, "results", results);
+});
+
+par.each([1, 2, 3], function(value, cb) {
+  cb(value === 2 ? -1 : null, value*2);
+}, function(err, results) {
+  console.log("error", err, "results", results);
 });
