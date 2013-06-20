@@ -99,7 +99,11 @@ function each(arr, cb, done) {
           error = err;
         }
         results.push(result);
-        next();
+        if ((current & 31) === 0) {
+          setImmediate(next);
+        } else {
+          next();
+        }
       });
     } else {
       done(error, results);
