@@ -6,6 +6,7 @@
  */
 
 var debug = require("debug")("parseq");
+require("setimmediate");
 
 function par() {
   var seqArgs = arguments;
