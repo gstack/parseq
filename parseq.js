@@ -100,7 +100,7 @@ function each(arr, cb, done) {
           error = err;
         }
         results.push(result);
-        if ((current & 31) === 0) {
+        if ((current & 31) === 0) {  // Hugues suggested using %42, but 32 is faster (no division :), still arbitrary. )
           setImmediate(next);
         } else {
           next();
