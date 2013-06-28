@@ -79,7 +79,7 @@ function seq() {
       seqArgs[max].apply(next, args);
     }
   };
-  
+
   debug("seq.apply1", i, max);
   var result = fn.apply(next, args);
   if (typeof result !== "undefined") {
@@ -114,6 +114,7 @@ function each(arr, cb, done) {
 }
 
 function pareach(arr, cb, done) {
+  if(!arr || arr.length === 0) {return done();}
   var max = arr.length;
   var results = [];
   var error = null;
