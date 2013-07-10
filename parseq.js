@@ -89,6 +89,7 @@ function seq() {
 }
 
 function each(arr, cb, done) {
+  if(!arr || arr.length === 0) {return done();}
   var max = arr.length;
   var current = 0;
   var results = [];
