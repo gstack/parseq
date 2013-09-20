@@ -95,7 +95,13 @@ par.each([1, 2, 3], function(value, cb) {
   console.log("error", err, "results", results);
 });
 
-par.each([1, 2, 3], function(value, cb) {
+par.each([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], function(value, cb) {
+  cb(value === 2 ? -1 : null, value*2);
+}, function(err, results) {
+  console.log("error", err, "results", results);
+});
+
+par.each([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 2, function(value, cb) {
   cb(value === 2 ? -1 : null, value*2);
 }, function(err, results) {
   console.log("error", err, "results", results);

@@ -8,6 +8,14 @@
 var debug = require("debug")("parseq");
 require("setimmediate");
 
+function chunk(array, chunkSize) {
+  return [].concat.apply([],
+    array.map(function(elem,i) {
+        return i%chunkSize ? [] : [array.slice(i,i+chunkSize)];
+    })
+  );
+}
+
 function par() {
   var seqArgs = arguments;
   var max = seqArgs.length-1;
@@ -114,28 +122,49 @@ function each(arr, cb, done) {
   next();
 }
 
-function pareach(arr, cb, done) {
+function pareach(arr, bucket, cb, done) {
   if(!arr || arr.length === 0) {return done();}
-  var max = arr.length;
-  var results = [];
-  var error = null;
-  var count = 0;
-  for (var i = 0; i < max; i++) {
-    (function(i) {
-      cb(arr[i], function(err, result) {
-        if (err) {
-          if (!error) {
-            error = err;
+  if(typeof bucket === 'function') {
+    done = cb;
+    cb = bucket;
+
+    var max = arr.length;
+    var results = [];
+    var error = null;
+    var count = 0;
+    for (var i = 0; i < max; i++) {
+      (function(i) {
+        cb(arr[i], function(err, result) {
+          if (err) {
+            if (!error) {
+              error = err;
+            }
+          } else {
+            results[i] = result;
           }
-        } else {
-          results[i] = result;
+          count++;
+          if (count >= max) {
+            done(error, results);
+          }
+        });
+      })(i);
+    }
+
+  } else {
+    var parts = chunk(arr, bucket);
+    each(parts, function(part, done) {
+      pareach(part, cb, done);
+    }, function(err, resArray) {
+      var res = [];
+      var resPart;
+      for(var i=0, l=resArray.length; i<l; i++) {
+        resPart = resArray[i];
+        for(var j=0, ll=resPart.length; j<ll; j++) {
+          res[i*bucket+j] = resPart[j];
         }
-        count++;
-        if (count >= max) {
-          done(error, results);
-        }
-      });
-    })(i);
+      }
+      done(err, res);
+    });
   }
 }
 

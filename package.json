@@ -2,7 +2,7 @@
   "author": "psq <psq@stoic.com>",
   "name": "parseq",
   "description": "a simple javascript control flow library, as simple as possible, but no simpler.",
-  "version": "0.3.6",
+  "version": "0.3.7",
   "main": "parseq.js",
   "dependencies": {
     "debug": "0.6.x",
