@@ -5,3 +5,4 @@ showWrapColumn = true
 
 projectDirectory = "$CWD"
 windowTitle = "$TM_DISPLAYNAME — ${CWD/^.*\///} ($TM_SCM_BRANCH)"
+invisiblesMap = "~ \t┊"
