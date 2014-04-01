@@ -123,7 +123,7 @@ function each(arr, cb, done) {
 }
 
 function pareach(arr, bucket, cb, done) {
-  if(!arr || arr.length === 0) {return done();}
+  if(!arr || arr.length === 0) {return done ? done() : cb();}
   if(typeof bucket === 'function') {
     done = cb;
     cb = bucket;
