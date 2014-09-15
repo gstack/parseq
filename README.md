@@ -1,4 +1,4 @@
-# parseq.js
+# parseq.js [![npm](http://img.shields.io/npm/v/parseq.svg)](https://npmjs.org/package/parseq) [![npm](http://img.shields.io/npm/dm/parseq.svg)](https://npmjs.org/package/parseq)
 
 a simple javascript control flow library, as simple as possible, but no simpler.
 
@@ -17,7 +17,7 @@ $ node testparseq.js
 ```
 
 # RESOURCES
-* [parseq.js](http://parseqjs.com) Documentation 
+* [parseq.js](http://parseqjs.com) Documentation
 * Github [repo](https://github.com/sutoiku/parseq)
 * Issue [tracker](https://github.com/sutoiku/parseq/issues)
 * Contribute by creating [pull requests](https://github.com/sutoiku/parseq/pulls)!
