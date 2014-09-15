@@ -5,8 +5,15 @@
  * @module       parseq
  */
 
-var debug = require("debug")("parseq");
-require("setimmediate");
+(function (factory) {
+ if (typeof exports === 'object') {
+   module.exports = factory(require('debug'), require('setimmediate'));
+ } else if (typeof define === 'function' && define.amd) {
+   define(['debug', 'setimmediate'], factory);
+ }
+}) (function(debu, setImmediate) {
+
+var debug = debu('parseq');
 
 function chunk(array, chunkSize) {
   return [].concat.apply([],
@@ -181,4 +188,6 @@ ParSeq.par = par;
 ParSeq.seq = seq;
 ParSeq.each = each;
 
-module.exports = ParSeq;
+return ParSeq;
+
+});
