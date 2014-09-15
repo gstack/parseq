@@ -7,11 +7,11 @@
 
 (function (factory) {
  if (typeof exports === 'object') {
-   module.exports = factory(require('debug'), require('setimmediate'));
+   module.exports = factory(require('debug'));
  } else if (typeof define === 'function' && define.amd) {
    define(['debug', 'setimmediate'], factory);
  }
-}) (function(debu, setImmediate) {
+}) (function(debu) {
 
 var debug = debu('parseq');
 
